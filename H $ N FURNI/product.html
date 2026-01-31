@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="#products.html">
+    <title>Products</title>
+</head>
+
+<body>
+    <header>
+        <h1>H&N Furnitures</h1>
+        <nav>
+            <a href="love.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- ===== PRODUCTS PAGE ===== -->
+    <section>
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="card"><img src="./IMAGE/hn chair5.jpg">
+                <div class="info">
+                    <p>Luxury Sofa Set</p> <br><span class="price">₦2,00000</span>
+                </div>
+            </div>
+
+            <div class="card"><img src="./IMAGE/h n chair 1.jpg">
+                <div class="info">1st class offices chair<br><span class="price">₦35,000</span></div>
+            </div>
+
+            <div class="card"><img src="./IMAGE/kam-idris-_HqHX3LBN18-unsplash.jpg">
+                <div class="info">Standard Sofa Set<br><span class="price">₦850,000</span></div>
+            </div>
+
+            <div class="card"><img src="./IMAGE/hnbed8.jpg">
+                <div class="info">Luxury Bed Set<br><span class="price">₦200,000</span></div>
+            </div>
+
+            <div class="card"><img src="./IMAGE/phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg">
+                <div class="info">Family Sofa Set<br><span class="price">₦1,400,000</span></div>
+            </div>
+
+            <div class="card"><img src="./IMAGE/h n chatr3.jpg">
+                <div class="info">Royal Chair Set<br><span class="price">₦4,00000</span></div>
+            </div>
+            <div class="card"><img src="./IMAGE/hnbed7.jpg">
+                <div class="info">Modern Bed set<br><span class="price">₦500,000</span></div>
+            </div>
+            <div class="card"><img src="./IMAGE/hnarm.jpg">
+                <div class="info">Classic Armchair<br><span class="price">₦600,000</span></div>
+            </div>
+            <div class="card"><img src="./IMAGE/hnrecliner.jpg">
+                <div class="info">Electrica Luxury Recliner<br><span class="price">₦10,00000</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT PAGE ===== -->
+    <section>
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <p>Phone: <a href="#" onclick="callPhone()">+234 808 806 5255</a></p>
+            <p>Email: <a href="mailto:dumapeniel82@gmail.com">dumapeniel82@gmail.com</a></p>
+            <p>Address: 17 Akiama Road, Opp Ibanisa Town Hall, Bonny Island, Rivers State, Nigeria</p>
+            <br>
+            <a class="btn" href="mailto:dumapeniel82@gmail.com">Message Us</a>
+        </div>
+    </section>
+    <footer>© 2026 H&N Furnitures</footer>
+
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 36px;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: rgb(135, 182, 235);
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: skyblue;
+            transition: 0.4s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        body {
+            background-color: #0a0f1fbd;
+        }
+
+        /* ===== PRODUCTS ===== */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 5px;
+        }
+
+        .card {
+            background: #0a0f1fe8;
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.4s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .card img {
+            width: 100%;
+            border-bottom: 1px solid rgb(135, 167, 235);
+        }
+
+        .card .info {
+            padding: 10px;
+        }
+
+        .price {
+            color: skyblue;
+            font-weight: bold;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-box {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 45px;
+            border-radius: 15px;
+            margin-top: 30px;
+            animation: pulse 5s infinite;
+            width: 60%;
+            color: white;
+            text-align: center;
+            display: block;
+            justify-content: center;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .contact-box a {
+            color: snow;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-box a:hover {
+            color: black;
+            background-color: skyblue;
+        }
+
+        .btn {
+            border-radius: 3px;
+            border: 1px solid rgba(255, 255, 255, 0.582);
+            font-size: 20px;
+            background-color: rgb(135, 198, 235);
+            -bottom: 5px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: skyblue;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media(max-width:900px) {
+            .about-container {
+                flex-direction: column;
+            }
+
+            .slider {
+                width: 100%;
+            }
+
+            section {
+                padding: 100px 20px;
+            }
+
+            .home h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.664);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+header h1 {
+  color: rgb(135, 182, 235);
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: skyblue;
+  transition: 0.4s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: skyblue;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: slateblue;
+}
+
+section {
+  padding: 120px 80px;
+}
+
+/* ===== HOME ===== */
+.home {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('./chair\ 1.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home-content {
+  max-width: 600px;
+  animation: fadeSlide 2s ease;
+}
+
+.home h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== ABOUT ===== */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+
+.slider {
+  width: 50%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  animation: slide 20s infinite;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  16% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(-200%);
+  }
+
+  66% {
+    transform: translateX(-300%);
+  }
+
+  83% {
+    transform: translateX(-400%);
+  }
+
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+.about-container div p {
+  font-size: 18px;
+  line-height: 1.6;
+  animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== PRODUCTS ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: black;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.4s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+  width: 100%;
+  border-bottom: 1px solid rgb(135, 167, 235);
+}
+
+.card .info {
+  padding: 10px;
+}
+
+.price {
+  color: skyblue;
+  font-weight: bold;
+}
+
+/* ===== CONTACT ===== */
+.contact-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contact-box a {
+  color: snow;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-box a:hover {
+  color: black;
+  background-color: skyblue;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.384);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:900px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  .home h2 {
+    font-size: 36px;
+  }
+}
